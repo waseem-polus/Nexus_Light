@@ -33,7 +33,9 @@ public class LevelGUIManager : MonoBehaviour
         optionsPanel = GameObject.Find("Options");
         optionsPanel.SetActive(false);
 
-        De_ActivatePausePanel();
+        if (isPaused) {
+            De_ActivatePausePanel();
+        }
     }
 
     void Update() {
@@ -56,7 +58,11 @@ public class LevelGUIManager : MonoBehaviour
 
         //resume timer
         timer.StartTimer();
-        levelManager.ResumeTime();
+        if (levelManager == null) {
+            Debug.Log("Level Manager not found");
+        } else {
+            levelManager.ResumeTime();
+        }
 
         //enable inlevelPanel
         inLevelPanel.SetActive(true);

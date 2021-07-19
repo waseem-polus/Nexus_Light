@@ -7,11 +7,11 @@ public class LevelManagement : MonoBehaviour
 {
     private static LevelManagement instance;
 
-    private GameObject player;
     private CheckpointManager checkpointManager;
+    private GameObject player;
+    private PlayerController playerController;
 
     public bool isLevel = true;
-
     public float freezeRespawnedPlayerFor = 0.5f;
 
     void Start() {
@@ -26,6 +26,7 @@ public class LevelManagement : MonoBehaviour
 
         if (isLevel) {
             player = GameObject.FindGameObjectWithTag("Player");
+            playerController = player.GetComponent<PlayerController>();
             checkpointManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
         }
     }
@@ -35,6 +36,11 @@ public class LevelManagement : MonoBehaviour
             if (player == null) {
                 player = GameObject.FindGameObjectWithTag("Player");
                 Debug.Log("Player Renewed");
+            }
+
+            if (playerController == null) {
+                playerController = player.GetComponent<PlayerController>();
+                Debug.Log("Player Controller Renewed");
             }
 
             if (checkpointManager == null) {
@@ -70,11 +76,11 @@ public class LevelManagement : MonoBehaviour
     }
 
     private IEnumerator FreezePlayer() {
-        player.GetComponent<PlayerController>().enabled = false;
+        playerController.enabled = false;
 
         yield return new WaitForSeconds(freezeRespawnedPlayerFor);
         
-        player.GetComponent<PlayerController>().enabled = true;
+        playerController.enabled = true;
     }
 
     private void DisablePlayerAnimations() {
@@ -86,20 +92,21 @@ public class LevelManagement : MonoBehaviour
 
     public void StopTime() {
         Time.timeScale = 0.0f;
-        player.GetComponent<PlayerController>().enabled = false;
+        playerController.enabled = false;
     }
 
     public void ResumeTime() {
         Time.timeScale = 1.0f;
-        player.GetComponent<PlayerController>().enabled = true;
-        if (player.GetComponent<PlayerController>() == null) {
-            Debug.Log("Controlle not found");
+        if (!playerController.enabled) {
+            playerController.enabled = true;
+        } else {
+            Debug.Log("Controller already enabled");
         }
     }
 
     public void EndOfLevel() {
         //take away control from player
-        player.GetComponent<PlayerController>().enabled = false;
+        playerController.enabled = false;
 
         //set animation to idle
         player.GetComponent<Animator>().SetBool("isRunning", false);
