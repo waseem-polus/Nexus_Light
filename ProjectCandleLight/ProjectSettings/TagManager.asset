@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - LevelManagement
+  - CheckPoint
+  - CheckpointManager
+  - TimerText
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Background
+  - Lasers
+  - EventBlocks
+  - Camera Boarder
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1253418935
+    locked: 0
+  - name: Ground
+    uniqueID: 187732983
+    locked: 0
+  - name: EventBlocks
+    uniqueID: 1788989279
+    locked: 0
+  - name: Player
+    uniqueID: 1546881079
+    locked: 0
+  - name: Lasers
+    uniqueID: 2074166997
+    locked: 0
+  - name: CameraBoarder
+    uniqueID: 2504706573
+    locked: 0
