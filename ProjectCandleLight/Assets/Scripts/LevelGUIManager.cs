@@ -8,31 +8,59 @@ public class LevelGUIManager : MonoBehaviour
     private Animator timerAnimator;
     private LevelManagement levelManager;
 
-    private GameObject inLevelPanel;
-    private GameObject pauseMenuPanel;
-    private GameObject endOfLevelPanel;
-    private GameObject optionsPanel;
+    public GameObject inLevelPanel;
+    public GameObject pauseMenuPanel;
+    public GameObject endOfLevelPanel;
+    public GameObject optionsPanel;
 
     private bool isPaused = false;
     private bool isEOL = false;
 
     void Start() {
         timer = GameObject.Find("Canvas").GetComponent<Timer>();
-        timerAnimator = GameObject.Find("TimerText").GetComponent<Animator>();
-    
+        if (timer == null) {
+            Debug.Log("timer not found");
+        } else {
+            timerAnimator = GameObject.Find("TimerText").GetComponent<Animator>();
+        }
+
         levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
+        if (levelManager == null) {
+            Debug.Log("levelManager not found");
+        }
 
-        inLevelPanel = GameObject.Find("LevelHUD");
         inLevelPanel.SetActive(true);
-
-        pauseMenuPanel = GameObject.Find("PauseMenuPanel");
         pauseMenuPanel.SetActive(false);
-
-        endOfLevelPanel = GameObject.Find("EndOfLevelPanel");
         endOfLevelPanel.SetActive(false);
-
-        optionsPanel = GameObject.Find("Options");
         optionsPanel.SetActive(false);
+
+        // inLevelPanel = GameObject.Find("LevelHUD");
+        // if (inLevelPanel == null) {
+        //     Debug.Log("inLevelPanel not found");
+        // } else {
+        //     inLevelPanel.SetActive(true);
+        // }
+
+        // pauseMenuPanel = GameObject.Find("PauseMenuPanel");
+        // if (pauseMenuPanel == null) {
+        //     Debug.Log("pauseMenuPanel not found");
+        // } else {
+        //     pauseMenuPanel.SetActive(false);
+        // }
+
+        // endOfLevelPanel = GameObject.Find("EndOfLevelPanel");
+        // if (endOfLevelPanel == null) {
+        //     Debug.Log("endOfLevelPanel not found");
+        // } else {
+        //     endOfLevelPanel.SetActive(false);
+        // }
+
+        // optionsPanel = GameObject.Find("Options");
+        // if (optionsPanel == null) {
+        //     Debug.Log("optionsPanel not found");
+        // } else {
+        //     optionsPanel.SetActive(false);
+        // }
 
         if (isPaused) {
             De_ActivatePausePanel();
@@ -46,6 +74,26 @@ public class LevelGUIManager : MonoBehaviour
     void Update() {
         if (levelManager == null) {
             levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
+        }
+
+        if (inLevelPanel == null) {
+            inLevelPanel = GameObject.Find("LevelHUD");
+            Debug.Log("inLevelPanel renewed");
+        }
+
+        if (pauseMenuPanel == null) {
+            pauseMenuPanel = GameObject.Find("PauseMenuPanel");
+            Debug.Log("pauseMenuPanel renewed");
+        }
+
+        if (endOfLevelPanel == null) {
+            endOfLevelPanel = GameObject.Find("EndOfLevelPanel");
+            Debug.Log("endOfLevelPanel renewed");
+        }
+
+        if (optionsPanel == null) {
+            optionsPanel = GameObject.Find("Options");
+            Debug.Log("optionsPanel renewed");
         }
 
         if (Input.GetButtonDown("Cancel") && !isEOL) {
