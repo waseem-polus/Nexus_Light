@@ -34,34 +34,6 @@ public class LevelGUIManager : MonoBehaviour
         endOfLevelPanel.SetActive(false);
         optionsPanel.SetActive(false);
 
-        // inLevelPanel = GameObject.Find("LevelHUD");
-        // if (inLevelPanel == null) {
-        //     Debug.Log("inLevelPanel not found");
-        // } else {
-        //     inLevelPanel.SetActive(true);
-        // }
-
-        // pauseMenuPanel = GameObject.Find("PauseMenuPanel");
-        // if (pauseMenuPanel == null) {
-        //     Debug.Log("pauseMenuPanel not found");
-        // } else {
-        //     pauseMenuPanel.SetActive(false);
-        // }
-
-        // endOfLevelPanel = GameObject.Find("EndOfLevelPanel");
-        // if (endOfLevelPanel == null) {
-        //     Debug.Log("endOfLevelPanel not found");
-        // } else {
-        //     endOfLevelPanel.SetActive(false);
-        // }
-
-        // optionsPanel = GameObject.Find("Options");
-        // if (optionsPanel == null) {
-        //     Debug.Log("optionsPanel not found");
-        // } else {
-        //     optionsPanel.SetActive(false);
-        // }
-
         if (isPaused) {
             De_ActivatePausePanel();
         }
