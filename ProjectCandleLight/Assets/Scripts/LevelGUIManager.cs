@@ -37,6 +37,10 @@ public class LevelGUIManager : MonoBehaviour
         if (isPaused) {
             De_ActivatePausePanel();
         }
+
+        if (isEOL) {
+            isEOL = false;
+        }
     }
 
     void Update() {
@@ -66,11 +70,7 @@ public class LevelGUIManager : MonoBehaviour
 
         //resume timer
         timer.StartTimer();
-        if (levelManager == null) {
-            Debug.Log("Level Manager not found");
-        } else {
-            levelManager.ResumeTime();
-        }
+        levelManager.ResumeTime();
 
         //enable inlevelPanel
         inLevelPanel.SetActive(true);
