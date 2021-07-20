@@ -47,10 +47,6 @@ public class LevelManagement : MonoBehaviour
                 checkpointManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
                 Debug.Log("checkpointManager Renewed");
             }
-
-            if (Input.GetButtonDown("Restart")) {
-                ResetScene();
-            }
         }
     }
 
@@ -83,13 +79,6 @@ public class LevelManagement : MonoBehaviour
         playerController.enabled = true;
     }
 
-    private void DisablePlayerAnimations() {
-        player.GetComponent<Animator>().SetBool("isRunning",false);
-        player.GetComponent<Animator>().SetBool("isJumpingUp",false);
-        player.GetComponent<Animator>().SetBool("isJumpingDown",false);
-        player.GetComponent<Animator>().SetBool("isWallSliding",false);
-    }
-
     public void StopTime() {
         Time.timeScale = 0.0f;
         playerController.enabled = false;
@@ -109,9 +98,13 @@ public class LevelManagement : MonoBehaviour
         playerController.enabled = false;
 
         //set animation to idle
-        player.GetComponent<Animator>().SetBool("isRunning", false);
-        player.GetComponent<Animator>().SetBool("isJumpingUp", false);
-        player.GetComponent<Animator>().SetBool("isJumpingDown", false);
-        player.GetComponent<Animator>().SetBool("isWallSliding", false);
+        DisablePlayerAnimations();
+    }
+
+    private void DisablePlayerAnimations() {
+        player.GetComponent<Animator>().SetBool("isRunning",false);
+        player.GetComponent<Animator>().SetBool("isJumpingUp",false);
+        player.GetComponent<Animator>().SetBool("isJumpingDown",false);
+        player.GetComponent<Animator>().SetBool("isWallSliding",false);
     }
 }

@@ -14,6 +14,7 @@ public class LevelGUIManager : MonoBehaviour
     private GameObject optionsPanel;
 
     private bool isPaused = false;
+    private bool isEOL = false;
 
     void Start() {
         timer = GameObject.Find("Canvas").GetComponent<Timer>();
@@ -43,11 +44,18 @@ public class LevelGUIManager : MonoBehaviour
             levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
         }
 
-        if (Input.GetButtonDown("Cancel")) {
+        if (Input.GetButtonDown("Cancel") && !isEOL) {
             if (isPaused) {
                 De_ActivatePausePanel();
             } else {
                 ActivatePausePanel();
+            }
+        }
+
+        if (Input.GetButtonDown("Restart")) {
+            levelManager.ResetScene();
+            if (isPaused) {
+                De_ActivatePausePanel();
             }
         }
     }
@@ -69,8 +77,6 @@ public class LevelGUIManager : MonoBehaviour
 
         //disable pauseMenuPanel
         pauseMenuPanel.SetActive(false);
-
-        //disable options panel
         optionsPanel.SetActive(false);
     }
 
@@ -84,38 +90,31 @@ public class LevelGUIManager : MonoBehaviour
         
         //Disable inLevelPanel
         inLevelPanel.SetActive(false);
+        optionsPanel.SetActive(false);
         
         //Enable PauseMenuPanel
         pauseMenuPanel.SetActive(true);
-
-        //disable options panel
-        optionsPanel.SetActive(false);
     }
 
     public void ActivateEndOfLevelPanel() {
-        //stop timer
-        timer.StopTimer();
-        timerAnimator.SetTrigger("EndOfLevel");
+        //set isEOL (is End of Level) to true
+        isEOL = true;
 
         //deactivate pause and inlevel panels
         inLevelPanel.SetActive(false);
         pauseMenuPanel.SetActive(false);
+        optionsPanel.SetActive(false);
 
         //activate endoflevel panel
         endOfLevelPanel.SetActive(true);
-
-        //disable options panel
-        optionsPanel.SetActive(false);
     }
 
     public void ActivateOptionsPanel() {
         //Disable inLevelPanel
         inLevelPanel.SetActive(false);
+        optionsPanel.SetActive(true);
         
         //Enable PauseMenuPanel
         pauseMenuPanel.SetActive(false);
-
-        //disable options panel
-        optionsPanel.SetActive(true);
     }
 }

@@ -8,26 +8,26 @@ public class NexusGate : MonoBehaviour
     private Animator timerAnimator;
     private LevelManagement levelManager;
     private Timer timer;
-    
-    public GameObject endOfLevelPanel;
-    public GameObject inLevelHUD;
+    private LevelGUIManager GUIManager;
 
     void Start()
     {
         cubeAnimator = GetComponent<Animator>();
         timerAnimator = GameObject.Find("TimerText").GetComponent<Animator>();
         levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
+        GUIManager = GameObject.Find("LevelGUIManager").GetComponent<LevelGUIManager>();
 
         timer = GameObject.Find("Canvas").GetComponent<Timer>();
-
-        endOfLevelPanel.SetActive(false);
-        inLevelHUD.SetActive(true);
     }
 
     void Update()
     {
         if (levelManager == null) {
             levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
+        }
+
+        if (GUIManager == null) {
+            GUIManager = GameObject.Find("LevelGUIManager").GetComponent<LevelGUIManager>();
         }
     }
 
@@ -48,7 +48,6 @@ public class NexusGate : MonoBehaviour
 
         timerAnimator.SetTrigger("EndOfLevel");
 
-        endOfLevelPanel.SetActive(true);
-        inLevelHUD.SetActive(false);
+        GUIManager.ActivateEndOfLevelPanel();
     }
 }
