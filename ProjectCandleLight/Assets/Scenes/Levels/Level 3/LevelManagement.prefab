@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLevel: 1
-  freezeRespawnedPlayerFor: 0.5
+  freezeRespawnedPlayerFor: 0.2
