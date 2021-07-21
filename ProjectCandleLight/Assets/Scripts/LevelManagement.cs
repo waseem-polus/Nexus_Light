@@ -10,9 +10,11 @@ public class LevelManagement : MonoBehaviour
     private CheckpointManager checkpointManager;
     private GameObject player;
     private PlayerController playerController;
+    private bool timeIsFrozen = false;
 
     public bool isLevel = true;
     public float freezeRespawnedPlayerFor = 0.5f;
+
 
     void Start() {
         if (instance == null) {
@@ -52,14 +54,26 @@ public class LevelManagement : MonoBehaviour
 
     public void GoToScene(int sceneIndex) {
         SceneManager.LoadScene(sceneIndex);
+
+        if (timeIsFrozen) {
+            ResumeTime();
+        }
     }
 
     public void NextScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        if (timeIsFrozen) {
+            ResumeTime();
+        }
     }
 
     public void ResetScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        if (timeIsFrozen) {
+            ResumeTime();
+        }
     }
 
     public void RespawnPlayer() {
@@ -82,15 +96,13 @@ public class LevelManagement : MonoBehaviour
     public void StopTime() {
         Time.timeScale = 0.0f;
         playerController.enabled = false;
+        timeIsFrozen = true;
     }
 
     public void ResumeTime() {
         Time.timeScale = 1.0f;
-        if (!playerController.enabled) {
-            playerController.enabled = true;
-        } else {
-            Debug.Log("Controller already enabled");
-        }
+        playerController.enabled = true;
+        timeIsFrozen = false;
     }
 
     public void EndOfLevel() {
@@ -106,5 +118,9 @@ public class LevelManagement : MonoBehaviour
         player.GetComponent<Animator>().SetBool("isJumpingUp",false);
         player.GetComponent<Animator>().SetBool("isJumpingDown",false);
         player.GetComponent<Animator>().SetBool("isWallSliding",false);
+    }
+
+    public bool GetIfTimeIsFrozen() {
+        return timeIsFrozen;
     }
 }

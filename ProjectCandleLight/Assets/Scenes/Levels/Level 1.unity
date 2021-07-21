@@ -268,6 +268,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1082125085}
     - target: {fileID: 873498184521665253, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 873498184521665253, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1082125085}
@@ -823,6 +827,11 @@ Transform:
   m_Father: {fileID: 493717660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &837957529 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6019025453666046063, guid: abd244731b32deb49b380337659016c5, type: 3}
+  m_PrefabInstance: {fileID: 1900396470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1030089037
 GameObject:
   m_ObjectHideFlags: 0
@@ -47160,6 +47169,11 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!198 &1701920386 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1738632093949567364, guid: abd244731b32deb49b380337659016c5, type: 3}
+  m_PrefabInstance: {fileID: 1900396470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1900396470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47167,6 +47181,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1170798956797158691, guid: abd244731b32deb49b380337659016c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573831017642404323, guid: abd244731b32deb49b380337659016c5, type: 3}
+      propertyPath: dustParticle
+      value: 
+      objectReference: {fileID: 837957529}
+    - target: {fileID: 3573831017642404323, guid: abd244731b32deb49b380337659016c5, type: 3}
+      propertyPath: dustUpParticle
+      value: 
+      objectReference: {fileID: 837957529}
+    - target: {fileID: 3573831017642404323, guid: abd244731b32deb49b380337659016c5, type: 3}
+      propertyPath: dustExplotionParticle
+      value: 
+      objectReference: {fileID: 1701920386}
     - target: {fileID: 3573831017642404324, guid: abd244731b32deb49b380337659016c5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -47214,6 +47244,10 @@ PrefabInstance:
     - target: {fileID: 3573831017642404327, guid: abd244731b32deb49b380337659016c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019025453666046063, guid: abd244731b32deb49b380337659016c5, type: 3}
+      propertyPath: TrailModule.mode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abd244731b32deb49b380337659016c5, type: 3}

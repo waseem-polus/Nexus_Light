@@ -57,6 +57,11 @@ public class PlayerController : MonoBehaviour
     public Transform wallCheck;
     public float wallCheckLength;
 
+    [Header("Particle System")]
+    public ParticleSystem dustUpParticle;
+    public ParticleSystem dustExplotionParticle;
+    
+    
     // Start is called before the first frame update
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -135,17 +140,22 @@ public class PlayerController : MonoBehaviour
         if (isPoundingGround && (isGrounded || isOnWall) ) {
             isPoundingGround = false;
             //TODO:Play pound camera effect here
+            dustExplotionParticle.Play();
             Debug.Log("Ground Pounded");
         }
     }
 
     private void Flip() {
         if (!isWallSliding) {
-        isFacingRight = !isFacingRight;
-        facingDirection *= -1;
+            isFacingRight = !isFacingRight;
+            facingDirection *= -1;
 
-        transform.Rotate(0.0f, 180.0f, 0.0f);
-        }
+            transform.Rotate(0.0f, 180.0f, 0.0f);
+
+            if (isGrounded) {
+                dustUpParticle.Play();
+            }
+        } 
     }
 
     private void CheckInput() {
@@ -218,6 +228,8 @@ public class PlayerController : MonoBehaviour
 
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
 
+            dustUpParticle.Play();
+
             jumpTimer = 0;
             isAttemptingToJump = false;
         }
@@ -234,6 +246,8 @@ public class PlayerController : MonoBehaviour
             Vector2 forceToAdd = new Vector2(wallScaleForce * wallScaleDirection.x, wallScaleForce * wallScaleDirection.y);
             rigidBody.AddForce(forceToAdd, ForceMode2D.Impulse);
 
+            dustUpParticle.Play();
+
             jumpTimer = 0;
             isAttemptingToJump = false;
         }
@@ -249,6 +263,8 @@ public class PlayerController : MonoBehaviour
             Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * movementInputDirection, wallJumpForce * wallJumpDirection.y);
             rigidBody.AddForce(forceToAdd, ForceMode2D.Impulse);
             
+            dustUpParticle.Play();
+
             jumpTimer = 0;
             isAttemptingToJump = false;
         }
