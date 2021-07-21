@@ -16,6 +16,7 @@ public class Checkpoints : MonoBehaviour
     
     [Space(10)]
     public ParticleSystem inactive;
+    public ParticleSystem activation;
     public ParticleSystem active;
 
     void Start() {
@@ -50,6 +51,7 @@ public class Checkpoints : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player") && activeCheckpoint < checkpointIndex) {
             inactive.Stop();
+            activation.Play();
             active.Play();
             checkpointManager.SetActiveCheckpoint(checkpointIndex);
             checkpointManager.SetActiveCheckpointPosition(checkpointTransform.position);

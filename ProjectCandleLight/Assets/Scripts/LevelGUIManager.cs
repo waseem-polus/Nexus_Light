@@ -139,10 +139,10 @@ public class LevelGUIManager : MonoBehaviour
 
     public void NextLevelButton() {
         levelTransition.SetTrigger("End Of Scene");
-        StartCoroutine(WaitFor(0.5f));
+        StartCoroutine(WaitForFadeOut(0.5f));
     }
 
-    private IEnumerator WaitFor(float time) {
+    private IEnumerator WaitForFadeOut(float time) {
         yield return new WaitForSeconds(time);
         levelManager.NextScene();
     }
