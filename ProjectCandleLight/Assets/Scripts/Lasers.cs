@@ -5,8 +5,6 @@ using UnityEngine;
 public class Lasers : MonoBehaviour
 {
     private LevelManagement levelManager;
-
-    //public LevelManagement levelManager;
     
     // Start is called before the first frame update
     void Start()
@@ -22,12 +20,10 @@ public class Lasers : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Laser Hit");
             levelManager.RespawnPlayer();
         }
     }

@@ -82,15 +82,18 @@ public class LevelManagement : MonoBehaviour
         player.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
         DisablePlayerAnimations();
 
-        StartCoroutine(FreezePlayer());
-    }
-
-    private IEnumerator FreezePlayer() {
         playerController.enabled = false;
 
-        yield return new WaitForSeconds(freezeRespawnedPlayerFor);
-        
+        if (playerController.enabled == false) {
+            Debug.Log("Controller Disabled");
+        }
+
+        StartCoroutine(WaitFor(freezeRespawnedPlayerFor));
         playerController.enabled = true;
+    }
+
+    public IEnumerator WaitFor(float time) {
+        yield return new WaitForSeconds(time);
     }
 
     public void StopTime() {

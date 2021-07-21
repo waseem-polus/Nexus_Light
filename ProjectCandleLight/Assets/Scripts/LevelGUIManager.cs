@@ -6,6 +6,7 @@ public class LevelGUIManager : MonoBehaviour
 {
     private Timer timer;
     private Animator timerAnimator;
+    private Animator levelTransition;
     private LevelManagement levelManager;
 
     public GameObject inLevelPanel;
@@ -18,12 +19,10 @@ public class LevelGUIManager : MonoBehaviour
 
     void Start() {
         timer = GameObject.Find("Canvas").GetComponent<Timer>();
-        if (timer == null) {
-            Debug.Log("timer not found");
-        } else {
-            timerAnimator = GameObject.Find("TimerText").GetComponent<Animator>();
-        }
-
+        timerAnimator = GameObject.Find("TimerText").GetComponent<Animator>();
+        
+        levelTransition = GameObject.Find("LevelTransition").GetComponent<Animator>();
+        
         levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
         if (levelManager == null) {
             Debug.Log("levelManager not found");
@@ -136,5 +135,13 @@ public class LevelGUIManager : MonoBehaviour
         
         //Enable PauseMenuPanel
         pauseMenuPanel.SetActive(false);
+    }
+
+    public void NextLevelButton() {
+        levelTransition.SetTrigger("End Of Scene");
+
+        levelManager.WaitFor(0.5f);
+
+        levelManager.NextScene();
     }
 }
