@@ -14,6 +14,7 @@ public class LevelManagement : MonoBehaviour
 
     public bool isLevel = true;
     public float freezeRespawnedPlayerFor = 0.5f;
+    public float levelTransitionDuration = 0.5f;
 
 
     void Start() {
@@ -84,7 +85,6 @@ public class LevelManagement : MonoBehaviour
 
         StartCoroutine(WaitFor(freezeRespawnedPlayerFor));
     }
-
 
     private IEnumerator WaitFor(float time) {
         playerController.enabled = false;
