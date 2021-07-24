@@ -28,14 +28,12 @@ public class Lasers : MonoBehaviour
         {
             playerAnimator.SetTrigger("playerDeath");
 
-            StartCoroutine(WaitFor());
-
+            levelManager.RespawnPlayer();
         }
     }
 
     private IEnumerator WaitFor() {
         yield return new WaitForSeconds(0.5f);
         
-        levelManager.RespawnPlayer();
     } 
 }

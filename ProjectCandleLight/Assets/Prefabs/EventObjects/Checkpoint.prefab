@@ -4915,7 +4915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointIndex: 1
   inactive: {fileID: 7837524553601301348}
-  activation: {fileID: 0}
+  activation: {fileID: 1320279674466446124}
   active: {fileID: 6867645927706974906}
 --- !u!95 &5429175416362766278
 Animator:
