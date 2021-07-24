@@ -3154,31 +3154,11 @@ MonoBehaviour:
   optionsPanel: {fileID: 47211024}
   statsPanel: {fileID: 1691136596}
   currentPlayerInfo:
-  - {fileID: 745241305}
-  - {fileID: 1844905934}
-  - {fileID: 406241245}
-  LeaderboardNames:
-  - {fileID: 1406542345}
-  - {fileID: 336452799}
-  - {fileID: 1006903601}
-  - {fileID: 1433416037}
-  - {fileID: 2077029238}
-  - {fileID: 2059779301}
-  - {fileID: 561988105}
-  - {fileID: 59562288}
-  - {fileID: 132985964}
-  - {fileID: 310366839}
-  leaderboardTimes:
-  - {fileID: 1061530839}
-  - {fileID: 193203813}
-  - {fileID: 154771028}
-  - {fileID: 2077029238}
-  - {fileID: 14085818}
-  - {fileID: 31496551}
-  - {fileID: 1138756885}
-  - {fileID: 1814233420}
-  - {fileID: 1872878428}
-  - {fileID: 131922500}
+    entryName: 
+    recordRank: {fileID: 0}
+    recordHolderName: {fileID: 0}
+    recordTime: {fileID: 0}
+  leaderboardEntries: []
 --- !u!1 &422188046
 GameObject:
   m_ObjectHideFlags: 0
