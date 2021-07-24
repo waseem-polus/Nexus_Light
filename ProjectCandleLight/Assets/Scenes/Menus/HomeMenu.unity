@@ -3158,7 +3158,47 @@ MonoBehaviour:
     recordRank: {fileID: 745241305}
     recordHolderName: {fileID: 1844905934}
     recordTime: {fileID: 406241245}
-  leaderboardEntries: []
+  leaderboardEntries:
+  - entryName: 1st Place
+    recordRank: {fileID: 1639422573}
+    recordHolderName: {fileID: 1406542345}
+    recordTime: {fileID: 1061530839}
+  - entryName: 2nd Place
+    recordRank: {fileID: 170434823}
+    recordHolderName: {fileID: 336452799}
+    recordTime: {fileID: 193203813}
+  - entryName: 3rd Place
+    recordRank: {fileID: 1712748377}
+    recordHolderName: {fileID: 1006903601}
+    recordTime: {fileID: 154771028}
+  - entryName: 4th Place
+    recordRank: {fileID: 1491599794}
+    recordHolderName: {fileID: 1433416037}
+    recordTime: {fileID: 297827428}
+  - entryName: 5th Place
+    recordRank: {fileID: 1112034619}
+    recordHolderName: {fileID: 2077029238}
+    recordTime: {fileID: 14085818}
+  - entryName: 6th Place
+    recordRank: {fileID: 1829234455}
+    recordHolderName: {fileID: 2059779301}
+    recordTime: {fileID: 31496551}
+  - entryName: 7th Place
+    recordRank: {fileID: 757329059}
+    recordHolderName: {fileID: 561988105}
+    recordTime: {fileID: 1138756885}
+  - entryName: 8th Place
+    recordRank: {fileID: 1476623665}
+    recordHolderName: {fileID: 59562288}
+    recordTime: {fileID: 1814233420}
+  - entryName: 9th Place
+    recordRank: {fileID: 172372031}
+    recordHolderName: {fileID: 132985964}
+    recordTime: {fileID: 1872878428}
+  - entryName: 10th Place
+    recordRank: {fileID: 813332611}
+    recordHolderName: {fileID: 310366839}
+    recordTime: {fileID: 131922500}
 --- !u!1 &422188046
 GameObject:
   m_ObjectHideFlags: 0
