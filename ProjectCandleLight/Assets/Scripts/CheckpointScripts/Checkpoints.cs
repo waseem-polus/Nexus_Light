@@ -13,11 +13,18 @@ public class Checkpoints : MonoBehaviour
     private int activeCheckpoint;
     
     public int checkpointIndex;
+    
+    [Space(10)]
+    public ParticleSystem inactive;
+    public ParticleSystem activation;
+    public ParticleSystem active;
 
     void Start() {
         animator = GetComponent<Animator>();
         checkpointTransform = GetComponent<Transform>();
         checkpointManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
+
+        inactive.Play();
 
         activeCheckpoint = checkpointManager.GetActiveCheckpoint();
     }
@@ -43,8 +50,12 @@ public class Checkpoints : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player") && activeCheckpoint < checkpointIndex) {
+            inactive.Stop();
+            activation.Play();
+            active.Play();
             checkpointManager.SetActiveCheckpoint(checkpointIndex);
             checkpointManager.SetActiveCheckpointPosition(checkpointTransform.position);
+
         }
     }
 }

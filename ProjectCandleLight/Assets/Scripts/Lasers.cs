@@ -5,11 +5,13 @@ using UnityEngine;
 public class Lasers : MonoBehaviour
 {
     private LevelManagement levelManager;
+    private Animator playerAnimator;
     
     // Start is called before the first frame update
     void Start()
     {
         levelManager = GameObject.FindGameObjectWithTag("LevelManagement").GetComponent<LevelManagement>();
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,7 +26,16 @@ public class Lasers : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            levelManager.RespawnPlayer();
+            playerAnimator.SetTrigger("playerDeath");
+
+            StartCoroutine(WaitFor());
+
         }
     }
+
+    private IEnumerator WaitFor() {
+        yield return new WaitForSeconds(0.5f);
+        
+        levelManager.RespawnPlayer();
+    } 
 }

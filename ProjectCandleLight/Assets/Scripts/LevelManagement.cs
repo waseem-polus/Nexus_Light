@@ -70,7 +70,7 @@ public class LevelManagement : MonoBehaviour
 
     public void ResetScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+
         if (timeIsFrozen) {
             ResumeTime();
         }
@@ -85,8 +85,7 @@ public class LevelManagement : MonoBehaviour
         StartCoroutine(WaitFor(freezeRespawnedPlayerFor));
     }
 
-
-    private IEnumerator WaitFor(float time) {
+    public IEnumerator WaitFor(float time) {
         playerController.enabled = false;
 
         yield return new WaitForSeconds(time);
