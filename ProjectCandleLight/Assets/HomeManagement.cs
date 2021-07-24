@@ -8,7 +8,8 @@ public class HomeManagement : MonoBehaviour
     public GameObject homePanel, levelsPanel, optionsPanel, statsPanel;
     
     [Space(10)]
-    public TMP_Text[] currentPlayerInfo, LeaderboardNames, leaderboardTimes;
+    public LeaderboardEntry currentPlayerInfo;
+    public LeaderboardEntry[] leaderboardEntries;
 
     void Start()
     {
