@@ -3154,10 +3154,10 @@ MonoBehaviour:
   optionsPanel: {fileID: 47211024}
   statsPanel: {fileID: 1691136596}
   currentPlayerInfo:
-    entryName: 
-    recordRank: {fileID: 0}
-    recordHolderName: {fileID: 0}
-    recordTime: {fileID: 0}
+    entryName: CurrentPlayer
+    recordRank: {fileID: 745241305}
+    recordHolderName: {fileID: 1844905934}
+    recordTime: {fileID: 406241245}
   leaderboardEntries: []
 --- !u!1 &422188046
 GameObject:
