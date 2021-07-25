@@ -6,6 +6,8 @@ public class Lasers : MonoBehaviour
 {
     private LevelManagement levelManager;
     private Animator playerAnimator;
+
+    public float respawnDelay = 0.1f;
     
     // Start is called before the first frame update
     void Start()
@@ -28,12 +30,14 @@ public class Lasers : MonoBehaviour
         {
             playerAnimator.SetTrigger("playerDeath");
 
-            levelManager.RespawnPlayer();
+
+            StartCoroutine(WaitFor());
         }
     }
 
     private IEnumerator WaitFor() {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(respawnDelay); 
         
+        levelManager.RespawnPlayer();
     } 
 }

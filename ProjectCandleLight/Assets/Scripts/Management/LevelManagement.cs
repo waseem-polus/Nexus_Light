@@ -10,10 +10,13 @@ public class LevelManagement : MonoBehaviour
     private CheckpointManager checkpointManager;
     private GameObject player;
     private PlayerController playerController;
+    private Animator levelTransition;
     private bool timeIsFrozen = false;
+    private bool isNewScene;
 
     public bool isLevel = true;
     public float freezeRespawnedPlayerFor = 0.5f;
+
 
 
     void Start() {
@@ -30,6 +33,7 @@ public class LevelManagement : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player");
             playerController = player.GetComponent<PlayerController>();
             checkpointManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
+            levelTransition = GameObject.Find("LevelTransition").GetComponent<Animator>();
         }
     }
 
@@ -49,18 +53,30 @@ public class LevelManagement : MonoBehaviour
                 checkpointManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
                 Debug.Log("checkpointManager Renewed");
             }
+        
+            if (levelTransition == null) {
+                 levelTransition = GameObject.Find("LevelTransition").GetComponent<Animator>();
+                Debug.Log("levelTransition Renewed");
+            }
+
+            if(isNewScene) {
+                levelTransition.SetTrigger("Load Scene");
+            }
         }
     }
 
     public void GoToScene(int sceneIndex) {
+        isNewScene = true;
         SceneManager.LoadScene(sceneIndex);
 
         if (timeIsFrozen) {
             ResumeTime();
         }
+
     }
 
     public void NextScene() {
+        isNewScene = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         if (timeIsFrozen) {
@@ -69,6 +85,7 @@ public class LevelManagement : MonoBehaviour
     }
 
     public void ResetScene() {
+        isNewScene = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         if (timeIsFrozen) {

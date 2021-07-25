@@ -74982,14 +74982,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToScene
       objectReference: {fileID: 0}
+    - target: {fileID: 588189180311051514, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 873498184521665253, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 873498184521665253, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
     - target: {fileID: 873498184848714085, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -75126,11 +75126,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResetScene
       objectReference: {fileID: 0}
+    - target: {fileID: 6694246904670051522, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694246904670051522, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6822306209842441891, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_text
-      value: 'LEVEL 2
-
-'
+      value: LEVEL 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}

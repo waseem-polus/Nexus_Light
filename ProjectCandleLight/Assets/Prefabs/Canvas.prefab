@@ -4572,7 +4572,7 @@ MonoBehaviour:
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
-  m_textAlignment: 65535
+  m_textAlignment: 2
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
