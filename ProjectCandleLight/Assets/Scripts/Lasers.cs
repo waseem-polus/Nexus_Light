@@ -28,9 +28,8 @@ public class Lasers : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerAnimator.SetTrigger("playerDeath");
-
-
+            //playerAnimator.SetTrigger("playerDeath");
+            
             StartCoroutine(WaitFor());
         }
     }
