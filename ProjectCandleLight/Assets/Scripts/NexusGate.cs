@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class NexusGate : MonoBehaviour
 {
-    private Animator cubeAnimator;
+    public ParticleSystem activationParticles;
+    public ParticleSystem idleParticle;
+    public Animator cubeAnimator;
+
     private Animator timerAnimator;
     private LevelManagement levelManager;
     private Timer timer;
@@ -12,7 +15,6 @@ public class NexusGate : MonoBehaviour
 
     void Start()
     {
-        cubeAnimator = GetComponent<Animator>();
         timerAnimator = GameObject.Find("TimerText").GetComponent<Animator>();
         levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
         GUIManager = GameObject.Find("LevelGUIManager").GetComponent<LevelGUIManager>();
@@ -39,6 +41,7 @@ public class NexusGate : MonoBehaviour
             levelManager.EndOfLevel();
 
             StartCoroutine(WaitFor(0.5f));
+            StartCoroutine(WaitForParticle(0.2f));
         }
 
     }
@@ -47,7 +50,14 @@ public class NexusGate : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         timerAnimator.SetTrigger("EndOfLevel");
+        idleParticle.Stop();
 
         GUIManager.ActivateEndOfLevelPanel();
+    }
+
+    IEnumerator WaitForParticle(float time) {
+        yield return new WaitForSeconds(time);
+
+        activationParticles.Play();
     }
 }

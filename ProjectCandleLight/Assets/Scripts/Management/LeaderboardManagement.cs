@@ -1,5 +1,6 @@
 using LootLocker.Requests;
 using UnityEngine;
+using System;
 
 public class LeaderboardManagement : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class LeaderboardManagement : MonoBehaviour
     public string memberID;
     public string playerName;
     
-    private int score;
+    private int msScore;
+    private string formattedTimeScore;
 
     public void Start () {
 
@@ -35,15 +37,22 @@ public class LeaderboardManagement : MonoBehaviour
     }
 
     public void SubmitTime() {
-        score = timer.intTime;
-        Debug.Log(score);
+        msScore = (int) Math.Round(1000 * timer.currentTime, 0);
+        Debug.Log(msScore);
 
-        LootLockerSDKManager.SubmitScore(memberID, score, leaderboardID, (response) => {
+        LootLockerSDKManager.SubmitScore(memberID, msScore, leaderboardID, (response) => {
             if (response.success) {
                 Debug.Log("Score Submitted Successfulyy");
             } else {
                 Debug.Log("Score Not Submitted");
             }
         });
+    }
+
+    public void DecodeScore() {
+        TimeSpan time = TimeSpan.FromMilliseconds((double) msScore);
+        formattedTimeScore = time.ToString(@"mm\:ss\.fff");
+
+        Debug.Log(formattedTimeScore);
     }
 }
