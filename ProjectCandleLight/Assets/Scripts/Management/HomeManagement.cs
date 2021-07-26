@@ -6,13 +6,20 @@ using TMPro;
 public class HomeManagement : MonoBehaviour
 {
     public GameObject homePanel, levelsPanel, optionsPanel, statsPanel;
-    
+
+    [Space(10)] 
+    public Animator sceneTransition;   
+
     [Space(10)]
     public LeaderboardEntry currentPlayerInfo;
     public LeaderboardEntry[] leaderboardEntries;
 
+    private LevelManagement levelManager;
+
     void Start()
     {
+        levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
+
         homePanel.SetActive(true);
         levelsPanel.SetActive(false);
         optionsPanel.SetActive(false);
@@ -22,7 +29,9 @@ public class HomeManagement : MonoBehaviour
     
     void Update()
     {
-        
+        if (levelManager == null) {
+            levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
+        }
     }
 
     public void ActivateHomePanel() {
@@ -51,5 +60,17 @@ public class HomeManagement : MonoBehaviour
         levelsPanel.SetActive(false);
         optionsPanel.SetActive(false); 
         statsPanel.SetActive(true);
+    }
+
+    public void GoToLevel(int levelIndex) {
+        StartCoroutine(WaitFor(0.5f, levelIndex));
+    }
+
+    private IEnumerator WaitFor(float time, int levelIndex) {
+        sceneTransition.SetTrigger("End Of Scene");
+
+        yield return new WaitForSeconds(time);
+        
+        levelManager.GoToScene(levelIndex);
     }
 }

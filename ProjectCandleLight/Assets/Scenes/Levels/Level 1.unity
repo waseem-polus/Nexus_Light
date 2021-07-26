@@ -263,17 +263,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 43690133583072319, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
     - target: {fileID: 741082387599997487, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_Color.a
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 873498184521665253, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_Interactable
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 873498184848714085, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -287,10 +279,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 873498184967208814, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
     - target: {fileID: 873498185134257246, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -303,10 +291,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 873498185759220917, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
     - target: {fileID: 873498185985956070, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -399,14 +383,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 873498186051574502, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
-    - target: {fileID: 873498186172312833, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
     - target: {fileID: 6694246904670051522, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -422,6 +398,10 @@ PrefabInstance:
     - target: {fileID: 6822306209842441891, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_ItalicAngle
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822306209842441891, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6822306209842441891, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_maxFontSize
@@ -489,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822306209842441891, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 3338665983
+      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6822306209842441891, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_maxLineDescender
@@ -953,17 +933,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1082125085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7446317807148427378, guid: 84bf1356f2f913842adbca38e80fedc6, type: 3}
-  m_PrefabInstance: {fileID: 7446317806074757999}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b2f00ee93fd604ab729ec8289e3453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1176623284
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -433,7 +433,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.842278, y: 0.6390805, z: -45.928192}
+  m_LocalPosition: {x: -41.860924, y: 0.6390805, z: -45.928192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 513678899}
@@ -651,17 +651,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1082125085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7446317807148427378, guid: 3a3477c9102c0284db1c16d1c14d765c, type: 3}
-  m_PrefabInstance: {fileID: 7446317806074757999}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b2f00ee93fd604ab729ec8289e3453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1242335658 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8438343812242305572, guid: 13eea234697f72d4eaba294e51e2e0fe, type: 3}
@@ -68157,6 +68146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb1f0c2097ef0c4ca3f808598d94693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnDelay: 0.1
 --- !u!19719996 &1556509802
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -74974,14 +74964,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 43690133583072319, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
-    - target: {fileID: 43690133583072319, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToScene
-      objectReference: {fileID: 0}
     - target: {fileID: 588189180311051514, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_CullTransparentMesh
       value: 1
@@ -75002,25 +74984,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 873498184967208814, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
-    - target: {fileID: 873498184967208814, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToScene
-      objectReference: {fileID: 0}
     - target: {fileID: 873498185134257246, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 873498185759220917, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
-    - target: {fileID: 873498185759220917, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetScene
       objectReference: {fileID: 0}
     - target: {fileID: 873498185985956070, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_Name
@@ -75109,22 +75075,6 @@ PrefabInstance:
     - target: {fileID: 873498185985956093, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 873498186051574502, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
-    - target: {fileID: 873498186051574502, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 873498186172312833, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1082125085}
-    - target: {fileID: 873498186172312833, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetScene
       objectReference: {fileID: 0}
     - target: {fileID: 6694246904670051522, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_Icon

@@ -12,72 +12,75 @@ public class LevelManagement : MonoBehaviour
     private PlayerController playerController;
     private Animator levelTransition;
     private bool timeIsFrozen = false;
-    private bool isNewScene;
+    private bool isLevel;
+    private int previousLevelIndex;
+    private int currentLevelIndex;
 
-    public bool isLevel = true;
     public float freezeRespawnedPlayerFor = 0.5f;
-
-
 
     void Start() {
         if (instance == null) {
             instance = this;
             DontDestroyOnLoad(gameObject);
         } else {
-            Destroy(instance.gameObject);
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(this);
         }
 
-        if (isLevel) {
+        instance.currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Previous: " + instance.previousLevelIndex + "\nCurrent: " + instance.currentLevelIndex);
+
+        if (instance.currentLevelIndex > 0) {
+            instance.isLevel = true;
+            Debug.Log("This is a level");
+
             player = GameObject.FindGameObjectWithTag("Player");
             playerController = player.GetComponent<PlayerController>();
             checkpointManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
+            
             levelTransition = GameObject.Find("LevelTransition").GetComponent<Animator>();
+            if (instance.currentLevelIndex != instance.previousLevelIndex) {
+                levelTransition.SetTrigger("Start Of New Scene");
+                instance.previousLevelIndex = currentLevelIndex;
+            }
+
+        } else {
+            instance.isLevel = false;
+            Debug.Log("This is not a level");
         }
     }
 
     void Update() {
-        if (isLevel) {
+        if (instance.isLevel) {
             if (player == null) {
                 player = GameObject.FindGameObjectWithTag("Player");
-                Debug.Log("Player Renewed");
             }
 
             if (playerController == null) {
                 playerController = player.GetComponent<PlayerController>();
-                Debug.Log("Player Controller Renewed");
             }
 
             if (checkpointManager == null) {
                 checkpointManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
-                Debug.Log("checkpointManager Renewed");
             }
         
             if (levelTransition == null) {
-                 levelTransition = GameObject.Find("LevelTransition").GetComponent<Animator>();
-                Debug.Log("levelTransition Renewed");
-            }
-
-            if(isNewScene) {
-                levelTransition.SetTrigger("Load Scene");
+                levelTransition = GameObject.Find("LevelTransition").GetComponent<Animator>();
             }
         }
     }
 
     public void GoToScene(int sceneIndex) {
-        isNewScene = true;
+        previousLevelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneIndex);
 
         if (timeIsFrozen) {
             ResumeTime();
         }
-
     }
 
     public void NextScene() {
-        isNewScene = true;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        previousLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(previousLevelIndex + 1);
 
         if (timeIsFrozen) {
             ResumeTime();
@@ -85,8 +88,8 @@ public class LevelManagement : MonoBehaviour
     }
 
     public void ResetScene() {
-        isNewScene = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        previousLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(previousLevelIndex);
 
         if (timeIsFrozen) {
             ResumeTime();

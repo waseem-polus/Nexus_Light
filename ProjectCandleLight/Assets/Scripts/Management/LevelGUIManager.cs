@@ -137,13 +137,36 @@ public class LevelGUIManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
     }
 
-    public void NextLevelButton() {
-        levelTransition.SetTrigger("End Of Scene");
-        StartCoroutine(WaitForFadeOut(0.5f));
+    public void NextLevelButton() {        
+        StartCoroutine(WaitForFadeOut(0.5f, 'N', 0));
     }
 
-    private IEnumerator WaitForFadeOut(float time) {
+    public void RestartLevelButton() {
+        levelManager.ResetScene();
+    }
+
+    public void GoToLevel(int levelIndex) {
+        StartCoroutine(WaitForFadeOut(0.5f, 'G', levelIndex));
+    }
+
+    private IEnumerator WaitForFadeOut(float time, char levelLoadingMode,int levelIndex) {
+        levelManager.ResumeTime();
+        //pauseMenuPanel.SetActive(false);
+        
+        levelTransition.SetTrigger("End Of Scene");
+        
         yield return new WaitForSeconds(time);
-        levelManager.NextScene();
+
+        switch (levelLoadingMode) {
+            case 'N':
+                levelManager.NextScene();
+                break;
+            case 'G': 
+                levelManager.GoToScene(levelIndex);
+                break;
+            default:
+                Debug.Log("LevelGUIManager.WaitFirFadeOut: levelLoadingMode \'" + levelLoadingMode + "\' does not exist");
+                break;
+        }
     }
 }
