@@ -10,7 +10,6 @@ public class Checkpoints : MonoBehaviour
     private CheckpointManager checkpointManager;
     
     private bool isActive = false;
-    private bool wasActive = false;
     private int activeCheckpoint;
     
     public int checkpointIndex;
@@ -25,32 +24,14 @@ public class Checkpoints : MonoBehaviour
         checkpointTransform = GetComponent<Transform>();
         checkpointManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
 
-        activeCheckpoint = checkpointManager.GetActiveCheckpoint();
-
         inactive.Play();
+
+        activeCheckpoint = checkpointManager.GetActiveCheckpoint();
     }
 
     void Update() {
         CheckIfActive();
         UpdateAnimations();
-
-        if (wasActive != isActive) {
-            wasActive = isActive;
-
-            if (isActive) {
-                Debug.Log("Checkpoint Activated");
-
-                inactive.Stop();
-                activation.Play();
-                active.Play();
-            } else {
-                Debug.Log("Checkpoint De-activated");
-
-                inactive.Play();
-                activation.Stop();
-                active.Stop();
-            }
-        }
     }
 
     private void CheckIfActive() {
@@ -69,6 +50,9 @@ public class Checkpoints : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player") && activeCheckpoint < checkpointIndex) {
+            inactive.Stop();
+            activation.Play();
+            active.Play();
             checkpointManager.SetActiveCheckpoint(checkpointIndex);
             checkpointManager.SetActiveCheckpointPosition(checkpointTransform.position);
 

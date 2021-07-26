@@ -7,10 +7,10 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    public int intTime = 0;
+    private float currentTime = 0;
     private bool isActive = true;
 
-    [HideInInspector]
-    public float currentTime = 0;
     public TMP_Text currentTimeText;
 
     void Update()
@@ -20,6 +20,9 @@ public class Timer : MonoBehaviour
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.ToString(@"mm\:ss\.fff");
+
+        string stringTime = time.ToString(@"ssfff");
+        intTime = int.Parse(stringTime);
     }
 
 
@@ -29,6 +32,5 @@ public class Timer : MonoBehaviour
 
     public void StopTimer() {
         isActive = false;
-        Debug.Log(Math.Round(1000 * currentTime, 0));
     }
 }
