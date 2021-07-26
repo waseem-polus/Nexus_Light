@@ -9862,6 +9862,8 @@ MonoBehaviour:
   wallScaleDirection: {x: 0, y: 3}
   groundPoundForce: 100
   groundPoundDirection: {x: 0, y: -2}
+  cameraShakeIntensity: 7
+  cameraShakeDurtion: 0.1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

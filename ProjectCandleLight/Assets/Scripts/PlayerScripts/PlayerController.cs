@@ -47,6 +47,8 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
     public float groundPoundForce;
     public Vector2 groundPoundDirection;
+    public float cameraShakeIntensity;
+    public float cameraShakeDurtion;
 
     [Header("Ground & Wall Check")]
     public LayerMask whatIsGround;
@@ -140,6 +142,7 @@ public class PlayerController : MonoBehaviour
         if (isPoundingGround && (isGrounded || isOnWall) ) {
             isPoundingGround = false;
             //TODO:Play pound camera effect here
+            CameraShake.Instance.ShakeCamera(cameraShakeIntensity, cameraShakeDurtion);
             dustExplotionParticle.Play();
             Debug.Log("Ground Pounded");
         }

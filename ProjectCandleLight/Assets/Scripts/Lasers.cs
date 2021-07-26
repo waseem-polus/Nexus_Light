@@ -7,7 +7,10 @@ public class Lasers : MonoBehaviour
     private LevelManagement levelManager;
     private Animator playerAnimator;
 
-    public float respawnDelay = 0.1f;
+    public float cameraShakeIntensity = 10f;
+    public float cameraShakeDurtion = 0.15f;
+
+    public float respawnDelay = 0.15f;
     
     // Start is called before the first frame update
     void Start()
@@ -28,8 +31,7 @@ public class Lasers : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //playerAnimator.SetTrigger("playerDeath");
-            
+            CameraShake.Instance.ShakeCamera(cameraShakeIntensity, cameraShakeDurtion);
             StartCoroutine(WaitFor());
         }
     }
