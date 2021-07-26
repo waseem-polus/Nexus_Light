@@ -940,6 +940,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1030089038}
     m_Modifications:
+    - target: {fileID: 3484322448383358623, guid: 13eea234697f72d4eaba294e51e2e0fe, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484322448383358623, guid: 13eea234697f72d4eaba294e51e2e0fe, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484322448383358623, guid: 13eea234697f72d4eaba294e51e2e0fe, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1788989279
+      objectReference: {fileID: 0}
     - target: {fileID: 8438343812242305572, guid: 13eea234697f72d4eaba294e51e2e0fe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -46233,7 +46245,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5429175416362766273, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
       propertyPath: m_Name
-      value: Checkpoint
+      value: Checkpoint (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5429175416362766273, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
       propertyPath: m_IsActive
@@ -46295,26 +46307,6 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1788989279
       objectReference: {fileID: 0}
-    - target: {fileID: 6867645927706974906, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
-      propertyPath: ShapeModule.m_Texture
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867645927706974906, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
-      propertyPath: ShapeModule.m_TextureClipChannel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867645927706974906, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.b
-      value: 0.9960785
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867645927706974906, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.g
-      value: 0.9960785
-      objectReference: {fileID: 0}
-    - target: {fileID: 6867645927706974906, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.r
-      value: 0.9960785
-      objectReference: {fileID: 0}
     - target: {fileID: 7295941288421276862, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
       propertyPath: m_Name
       value: 'InactiveParticles '
@@ -46325,7 +46317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8782014029492025948, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 221552a1c8e98614fb2c6e9d77e94456, type: 3}
