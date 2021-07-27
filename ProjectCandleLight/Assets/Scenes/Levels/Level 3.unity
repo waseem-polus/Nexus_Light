@@ -424,9 +424,9 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 33
       objectReference: {fileID: 0}
-    - target: {fileID: 873498185588984963, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
+    - target: {fileID: 873498185588984960, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 873498185985956070, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_Name
@@ -515,6 +515,18 @@ PrefabInstance:
     - target: {fileID: 873498185985956093, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873498185999900547, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028147932386498143, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_Name
+      value: Clock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5281829858303390050, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6822306209842441891, guid: 0e2954f92ed58c2438fcf4613245b81d, type: 3}
       propertyPath: m_text

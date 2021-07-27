@@ -8,14 +8,14 @@ public class NexusGate : MonoBehaviour
     public ParticleSystem idleParticle;
     public Animator cubeAnimator;
 
-    private Animator timerAnimator;
+    private Animator levelStatsAnimator;
     private LevelManagement levelManager;
     private Timer timer;
     private LevelGUIManager GUIManager;
 
     void Start()
     {
-        timerAnimator = GameObject.Find("TimerText").GetComponent<Animator>();
+        levelStatsAnimator = GameObject.Find("LevelStats").GetComponent<Animator>();
         levelManager = GameObject.Find("LevelManagement").GetComponent<LevelManagement>();
         GUIManager = GameObject.Find("LevelGUIManager").GetComponent<LevelGUIManager>();
 
@@ -49,7 +49,7 @@ public class NexusGate : MonoBehaviour
     IEnumerator WaitFor(float time) {
         yield return new WaitForSeconds(time);
 
-        timerAnimator.SetTrigger("EndOfLevel");
+        levelStatsAnimator.SetTrigger("EndOfLevel");
         idleParticle.Stop();
 
         GUIManager.ActivateEndOfLevelPanel();

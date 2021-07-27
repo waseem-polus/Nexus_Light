@@ -5,7 +5,6 @@ using UnityEngine;
 public class LevelGUIManager : MonoBehaviour
 {
     private Timer timer;
-    private Animator timerAnimator;
     private Animator levelTransition;
     private LevelManagement levelManager;
 
@@ -19,7 +18,6 @@ public class LevelGUIManager : MonoBehaviour
 
     void Start() {
         timer = GameObject.Find("Canvas").GetComponent<Timer>();
-        timerAnimator = GameObject.Find("TimerText").GetComponent<Animator>();
         
         levelTransition = GameObject.Find("LevelTransition").GetComponent<Animator>();
         
