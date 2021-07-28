@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 8416490}
+    - target: {fileID: 3931028160166552929, guid: 0815423b9ebdc7f45981ce24152e9703, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1429458663}
     - target: {fileID: 3931028160166552931, guid: 0815423b9ebdc7f45981ce24152e9703, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.96477
@@ -249,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931028160359992222, guid: 0815423b9ebdc7f45981ce24152e9703, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -36.96477
+      value: -33.488583
       objectReference: {fileID: 0}
     - target: {fileID: 3931028160359992222, guid: 0815423b9ebdc7f45981ce24152e9703, type: 3}
       propertyPath: m_LocalPosition.y
