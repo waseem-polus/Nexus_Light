@@ -15,11 +15,11 @@ C:/Users/WASEE/Documents/Unity Projects/Nexus_Light/ProjectCandleLight
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60065
+50925
 Successfully changed project path to: C:/Users/WASEE/Documents/Unity Projects/Nexus_Light/ProjectCandleLight
 C:/Users/WASEE/Documents/Unity Projects/Nexus_Light/ProjectCandleLight
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 135.07 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 181.21 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.1f1 (77a89f25062f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/Resources/UnitySubsystems
@@ -36,176 +36,302 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56260
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007243 seconds.
+Registered in 0.008078 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 118.85 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 222.15 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.635 seconds
+- Completed reload, in  3.726 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007585 seconds.
+Registered in 0.010266 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 124.94 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 198.62 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.321 seconds
+- Completed reload, in  2.908 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3188 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 141.0 MB.
-System memory in use after: 141.2 MB.
+System memory in use after: 141.1 MB.
 
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 3632.
-Total: 4.467600 ms (FindLiveObjects: 0.505300 ms CreateObjectMapping: 0.346900 ms MarkObjects: 3.390400 ms  DeleteObjects: 0.222500 ms)
-
-========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 6.98 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.5 MB.
-System memory in use after: 73.6 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3632.
-Total: 5.005200 ms (FindLiveObjects: 0.430400 ms CreateObjectMapping: 0.233800 ms MarkObjects: 3.868400 ms  DeleteObjects: 0.469000 ms)
+Total: 4.900900 ms (FindLiveObjects: 0.449800 ms CreateObjectMapping: 0.247700 ms MarkObjects: 3.991300 ms  DeleteObjects: 0.209500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Levels/Level 1.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Levels/Level 1.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bebee99d93ebb5b4cccae3d1b31b827c') in 0.026995 seconds
-  Import took 0.036828 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 55.431370 seconds.
   path: Assets/Scenes/Levels/Level 2.unity
   artifactKey: Guid(c707efb92cf93344298f2f0d362b66bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Levels/Level 2.unity using Guid(c707efb92cf93344298f2f0d362b66bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9946776d39d64486e15d55e06fcbbaf4') in 0.021989 seconds
-  Import took 0.033736 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011241 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.969 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 9.12 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3062 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.9 MB.
-System memory in use after: 134.1 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3636.
-Total: 5.895700 ms (FindLiveObjects: 0.858700 ms CreateObjectMapping: 0.419800 ms MarkObjects: 4.425300 ms  DeleteObjects: 0.189100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013557 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.179 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 5.23 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3062 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 134.0 MB.
-System memory in use after: 134.1 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3640.
-Total: 3.976100 ms (FindLiveObjects: 0.398100 ms CreateObjectMapping: 0.214200 ms MarkObjects: 3.195800 ms  DeleteObjects: 0.165900 ms)
+Start importing Assets/Scenes/Levels/Level 2.unity using Guid(c707efb92cf93344298f2f0d362b66bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bc4bc50013d78d879e99c6a41559463') in 0.034059 seconds
+  Import took 0.044589 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 225.295039 seconds.
-  path: Assets/Scenes/Levels/Level 1.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Levels/Level 1.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e816bbb6181db8ce05e2ef87f3daacc5') in 0.031429 seconds
-  Import took 0.042321 seconds .
+  Time since last request: 9.168754 seconds.
+  path: Assets/Scenes/Levels/Level 2.unity
+  artifactKey: Guid(c707efb92cf93344298f2f0d362b66bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Levels/Level 2.unity using Guid(c707efb92cf93344298f2f0d362b66bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d32f574f353deb9bde4aff242a1ce62') in 0.039017 seconds
+  Import took 0.063084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.211366 seconds.
+  path: Assets/Scenes/Levels/Level 3.unity
+  artifactKey: Guid(3e4fa4a9e6351e24ca0cc593f0da3b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Levels/Level 3.unity using Guid(3e4fa4a9e6351e24ca0cc593f0da3b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6305a8a837023b386e71abd65b45d778') in 0.030846 seconds
+  Import took 0.052067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 125.945083 seconds.
+  path: Assets/Scenes/Levels/Level 3.unity
+  artifactKey: Guid(3e4fa4a9e6351e24ca0cc593f0da3b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Levels/Level 3.unity using Guid(3e4fa4a9e6351e24ca0cc593f0da3b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72f7781ad9eb3dc4e7967d9ff58ade90') in 0.012457 seconds
+  Import took 0.049481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13460.476307 seconds.
+  path: Assets/Sprites/Ground/LightBarriers
+  artifactKey: Guid(96aecffdc1a1b6941b72d04d8bb1205f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers using Guid(96aecffdc1a1b6941b72d04d8bb1205f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '490255ed9a955f42ab3ffaf733ea06ce') in 0.018049 seconds
+  Import took 0.052882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015905 seconds.
+  path: Assets/Sprites/Ground/LightBarriers
+  artifactKey: Guid(96aecffdc1a1b6941b72d04d8bb1205f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers using Guid(96aecffdc1a1b6941b72d04d8bb1205f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '490255ed9a955f42ab3ffaf733ea06ce') in 0.025651 seconds
+  Import took 0.056621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.636302 seconds.
+  path: Assets/Sprites/Ground/LightSwitches
+  artifactKey: Guid(116c90971eb53da4ab82c0c77066ac2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches using Guid(116c90971eb53da4ab82c0c77066ac2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91afcf176105dbdd0877b859d4dd42e7') in 0.022396 seconds
+  Import took 0.032866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.736234 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/GreenSwitch.png
+  artifactKey: Guid(9793bef611bed664f81e75593e456315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/GreenSwitch.png using Guid(9793bef611bed664f81e75593e456315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53aea8071aabc6bea5b4801b0a837606') in 0.313725 seconds
+  Import took 0.328274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.138051 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/CyanSwitch.png
+  artifactKey: Guid(82569f4a52d5c26468f1a444d9fdab8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/CyanSwitch.png using Guid(82569f4a52d5c26468f1a444d9fdab8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dc29f1c294f9c43d5ddf133e83595d6') in 0.045113 seconds
+  Import took 0.056721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.678176 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/CyanSwitch.png
+  artifactKey: Guid(82569f4a52d5c26468f1a444d9fdab8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/CyanSwitch.png using Guid(82569f4a52d5c26468f1a444d9fdab8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '094e5c4d0be2b76c5d2e1c5fd4586b29') in 0.023102 seconds
+  Import took 0.036199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.945816 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/GreenSwitch.png
+  artifactKey: Guid(9793bef611bed664f81e75593e456315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/GreenSwitch.png using Guid(9793bef611bed664f81e75593e456315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a97fc54f62df835237b91e8fcab348b3') in 0.026187 seconds
+  Import took 0.041321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.426515 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/CyanSwitch.png
+  artifactKey: Guid(82569f4a52d5c26468f1a444d9fdab8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/CyanSwitch.png using Guid(82569f4a52d5c26468f1a444d9fdab8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f23517f6f206e93a057c64794715e0') in 0.027803 seconds
+  Import took 0.042894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.405724 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/MagentaSwitch.png
+  artifactKey: Guid(bc34ad3177734b941beafb5c5a963e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/MagentaSwitch.png using Guid(bc34ad3177734b941beafb5c5a963e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f291f15a793a3da5d4b1854fd9f73f1') in 0.045817 seconds
+  Import took 0.055209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.846346 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/PinkSwitch.png
+  artifactKey: Guid(d243a0bc7ebd78c48b924954b7ec4307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/PinkSwitch.png using Guid(d243a0bc7ebd78c48b924954b7ec4307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a139af6d7bbfc75a6d32daa8466e25d1') in 0.034111 seconds
+  Import took 0.050789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.616025 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/PinkSwitch.png
+  artifactKey: Guid(d243a0bc7ebd78c48b924954b7ec4307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/PinkSwitch.png using Guid(d243a0bc7ebd78c48b924954b7ec4307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f6783380ce5eccc59f18bd6a973dce') in 0.080950 seconds
+  Import took 0.094899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.293886 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/MagentaSwitch.png
+  artifactKey: Guid(bc34ad3177734b941beafb5c5a963e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/MagentaSwitch.png using Guid(bc34ad3177734b941beafb5c5a963e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b57352d8c1e89d04265fe1cd21417b0') in 0.034354 seconds
+  Import took 0.046742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.571454 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/OrangeSwitch.png
+  artifactKey: Guid(22b5e24f378eb814087e198a3412c75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/OrangeSwitch.png using Guid(22b5e24f378eb814087e198a3412c75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5dec7437074ed8d72bab2a17fc13557') in 0.050426 seconds
+  Import took 0.072659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.762780 seconds.
+  path: Assets/Sprites/Ground/LightSwitches/YellowSwitch.png
+  artifactKey: Guid(f6edc2e9e7024984996a1e23ef6bec80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightSwitches/YellowSwitch.png using Guid(f6edc2e9e7024984996a1e23ef6bec80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc9684da8a8345cb9325bc1efee1add') in 0.533751 seconds
+  Import took 0.697754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.231851 seconds.
+  path: Assets/Sprites/Ground/LightBarriers/CyanBarrier.png
+  artifactKey: Guid(6f33f4386b0a28d4298f71c4dcf262bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers/CyanBarrier.png using Guid(6f33f4386b0a28d4298f71c4dcf262bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'def20fcae51a5e7a5545a1aa530e2646') in 0.058750 seconds
+  Import took 0.072491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.110849 seconds.
+  path: Assets/Sprites/Ground/LightBarriers/CyanBarrier.png
+  artifactKey: Guid(6f33f4386b0a28d4298f71c4dcf262bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers/CyanBarrier.png using Guid(6f33f4386b0a28d4298f71c4dcf262bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a2037f09ed9c6edb8975d76c99915f4') in 0.040076 seconds
+  Import took 0.103002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.784967 seconds.
+  path: Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png
+  artifactKey: Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png using Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af3015d1ec7cd154a0ac5219430b7de') in 0.031821 seconds
+  Import took 0.046004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006064 seconds.
+  path: Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png
+  artifactKey: Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png using Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af3015d1ec7cd154a0ac5219430b7de') in 0.024246 seconds
+  Import took 0.037253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.550150 seconds.
+  path: Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png
+  artifactKey: Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png using Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da7f9016eabccb23481e591d0c5b0fce') in 0.164587 seconds
+  Import took 0.177512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 363.306293 seconds.
+  path: Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png
+  artifactKey: Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png using Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '506520bcf1e97be23eb962c38998b137') in 0.186091 seconds
+  Import took 0.202056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 398.792250 seconds.
+  path: Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png
+  artifactKey: Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Ground/LightBarriers/MagentaBarrier.png using Guid(b321d4504c161944ba0105fbf7ccfbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d9509eb18f850e887ac9d8c2892781') in 0.170986 seconds
+  Import took 0.182229 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006760 seconds.
+Registered in 0.011928 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.76 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.154 seconds
+- Completed reload, in  2.616 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 2.77 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3062 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 134.0 MB.
-System memory in use after: 134.2 MB.
+System memory in use before: 136.9 MB.
+System memory in use after: 137.0 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3644.
-Total: 4.532800 ms (FindLiveObjects: 0.513400 ms CreateObjectMapping: 0.466900 ms MarkObjects: 3.378000 ms  DeleteObjects: 0.171900 ms)
+Total: 36.745300 ms (FindLiveObjects: 3.718400 ms CreateObjectMapping: 0.909800 ms MarkObjects: 31.321500 ms  DeleteObjects: 0.792500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 45.641256 seconds.
-  path: Assets/Scenes/Levels/Level 2.unity
-  artifactKey: Guid(c707efb92cf93344298f2f0d362b66bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Levels/Level 2.unity using Guid(c707efb92cf93344298f2f0d362b66bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f13241b87df4333d840a2c0af1205f94') in 0.033596 seconds
-  Import took 0.046092 seconds .
+  Time since last request: 526.643842 seconds.
+  path: Assets/Prefabs/LightBarriers/BlueBarriers.prefab
+  artifactKey: Guid(6fa14316dca9d3f4392369f3c03ff76a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/LightBarriers/BlueBarriers.prefab using Guid(6fa14316dca9d3f4392369f3c03ff76a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76f2490c66deefb847e1e245d693b89e') in 0.138840 seconds
+  Import took 0.158963 seconds .
 
 ========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 9.25 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.8 MB.
-System memory in use after: 74.0 MB.
+Received Import Request.
+  Time since last request: 472.548655 seconds.
+  path: Assets/Prefabs/EventObjects
+  artifactKey: Guid(a503189ea2d666f4e8fab8ca212f0ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EventObjects using Guid(a503189ea2d666f4e8fab8ca212f0ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb71afe4914aafa8063f240da8cc1dff') in 0.016862 seconds
+  Import took 0.031949 seconds .
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3644.
-Total: 12.999800 ms (FindLiveObjects: 0.701200 ms CreateObjectMapping: 0.395200 ms MarkObjects: 11.104000 ms  DeleteObjects: 0.794300 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 13.573639 seconds.
+  path: Assets/Prefabs/EventObjects/LightSwitches
+  artifactKey: Guid(af29650d994c27f44963094a4dabd6ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EventObjects/LightSwitches using Guid(af29650d994c27f44963094a4dabd6ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1060d0aaa083bb68d601aafed13b03a5') in 0.005975 seconds
+  Import took 0.021411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.502260 seconds.
+  path: Assets/Prefabs/EventObjects/LightSwitches/MagentaSwitch.prefab
+  artifactKey: Guid(6991dd23e58297140beb84ce74251e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EventObjects/LightSwitches/MagentaSwitch.prefab using Guid(6991dd23e58297140beb84ce74251e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9af1b35a38c6d126569efb1618da27d2') in 0.397607 seconds
+  Import took 0.407359 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
