@@ -43,7 +43,6 @@ public class NexusGate : MonoBehaviour
             StartCoroutine(WaitFor(0.5f));
             StartCoroutine(WaitForParticle(0.2f));
         }
-
     }
 
     IEnumerator WaitFor(float time) {
