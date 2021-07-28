@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 443613797142192471}
   - component: {fileID: 443613797142192467}
   m_Layer: 9
-  m_Name: NexusCube
+  m_Name: NexusGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationParticles: {fileID: 6874387404324358917}
   idleParticle: {fileID: 6514195000671893297}
-  cubeAnimator: {fileID: 443613797142192470}
+  gateAnimator: {fileID: 443613797142192470}
 --- !u!1 &2797177742619082931
 GameObject:
   m_ObjectHideFlags: 0
