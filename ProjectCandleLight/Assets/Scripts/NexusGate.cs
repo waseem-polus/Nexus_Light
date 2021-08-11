@@ -6,7 +6,7 @@ public class NexusGate : MonoBehaviour
 {
     public ParticleSystem activationParticles;
     public ParticleSystem idleParticle;
-    public Animator cubeAnimator;
+    public Animator gateAnimator;
 
     private Animator levelStatsAnimator;
     private LevelManagement levelManager;
@@ -35,7 +35,7 @@ public class NexusGate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
-            cubeAnimator.SetTrigger("PlayerCollision");
+            gateAnimator.SetTrigger("PlayerCollision");
             
             timer.StopTimer();
             levelManager.EndOfLevel();
@@ -43,7 +43,6 @@ public class NexusGate : MonoBehaviour
             StartCoroutine(WaitFor(0.5f));
             StartCoroutine(WaitForParticle(0.2f));
         }
-
     }
 
     IEnumerator WaitFor(float time) {
