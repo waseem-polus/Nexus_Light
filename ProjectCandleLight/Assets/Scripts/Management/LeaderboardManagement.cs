@@ -1,4 +1,3 @@
-using LootLocker.Requests;
 using UnityEngine;
 using System;
 
@@ -26,27 +25,11 @@ public class LeaderboardManagement : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
-        LootLockerSDKManager.StartSession("WassomiTest", (response) => {
-            if (response.success) {
-                Debug.Log("Session Started Seccessfully");
-            } else {
-                Debug.Log("Session Failed to Start");
-            }
-        });
     }
 
     public void SubmitTime() {
         msScore = (int) Math.Round(1000 * timer.currentTime, 0);
         Debug.Log(msScore);
-
-        LootLockerSDKManager.SubmitScore(memberID, msScore, leaderboardID, (response) => {
-            if (response.success) {
-                Debug.Log("Score Submitted Successfulyy");
-            } else {
-                Debug.Log("Score Not Submitted");
-            }
-        });
     }
 
     public void DecodeScore() {
