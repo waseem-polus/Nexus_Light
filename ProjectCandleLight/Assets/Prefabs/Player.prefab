@@ -9806,7 +9806,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79d5b548825c06249933239307580167, type: 2}
+  - {fileID: 2100000, guid: 6e59eea4cbbce2e40b1da5fef45fca8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9889,7 +9889,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 10
-  m_Material: {fileID: 6200000, guid: 46d2b0d994465424aa8735b4f16690ae, type: 2}
+  m_Material: {fileID: 6200000, guid: 62d411e903f43bf4baaf0da51420e44a, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -9903,7 +9903,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3573831017642404324}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 46d2b0d994465424aa8735b4f16690ae, type: 2}
+  m_Material: {fileID: 6200000, guid: 62d411e903f43bf4baaf0da51420e44a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
