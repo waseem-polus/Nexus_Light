@@ -38,6 +38,7 @@ public class NexusGate : MonoBehaviour
             gateAnimator.SetTrigger("PlayerCollision");
             
             timer.StopTimer();
+            timer.SaveTime();
             levelManager.EndOfLevel();
 
             StartCoroutine(WaitFor(0.5f));

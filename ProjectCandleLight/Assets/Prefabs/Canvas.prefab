@@ -2837,6 +2837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 0
   currentTimeText: {fileID: 873498185417103026}
+  bestTimerText: {fileID: 6981189969676736296}
 --- !u!1 &873498185999900547
 GameObject:
   m_ObjectHideFlags: 0

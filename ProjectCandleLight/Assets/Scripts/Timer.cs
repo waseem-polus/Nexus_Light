@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 using TMPro;
@@ -12,16 +13,16 @@ public class Timer : MonoBehaviour
     [HideInInspector]
     public float currentTime = 0;
     public TMP_Text currentTimeText;
+    public TMP_Text bestTimerText;
 
-    void Update()
+    private void Update()
     {
         if (isActive) {
             currentTime += Time.deltaTime;
         }
-        TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        currentTimeText.text = time.ToString(@"mm\:ss\.fff");
+        
+        currentTimeText.text = FloatTimeToString(currentTime);
     }
-
 
     public void StartTimer() {
         isActive = true;
@@ -29,6 +30,22 @@ public class Timer : MonoBehaviour
 
     public void StopTimer() {
         isActive = false;
-        Debug.Log(Math.Round(1000 * currentTime, 0));
+    }
+
+    public void SaveTime() {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        float bestTime = PlayerPrefs.GetFloat("Level" + sceneIndex + "Time");
+
+        if (bestTime > currentTime || bestTime <= 0) {
+            PlayerPrefs.SetFloat("Level" + sceneIndex + "Time", currentTime);
+            bestTimerText.text = FloatTimeToString(currentTime) + " (New Best!)";
+        } else {
+            bestTimerText.text = FloatTimeToString(bestTime);
+        }
+    }
+
+    private string FloatTimeToString(float timeFloat) {
+        TimeSpan time = TimeSpan.FromSeconds(timeFloat);
+        return time.ToString(@"mm\:ss\.fff");
     }
 }
