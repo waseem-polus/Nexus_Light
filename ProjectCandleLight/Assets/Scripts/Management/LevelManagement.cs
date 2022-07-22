@@ -73,6 +73,11 @@ public class LevelManagement : MonoBehaviour
         previousLevelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneIndex);
 
+        if (sceneIndex > 0) {
+            int timesPlayed = PlayerPrefs.GetInt("Level" + sceneIndex + "TimesPlayed");
+            PlayerPrefs.SetInt("Level" + sceneIndex + "TimesPlayed", timesPlayed + 1);
+        }
+
         if (timeIsFrozen) {
             ResumeTime();
         }
@@ -82,6 +87,11 @@ public class LevelManagement : MonoBehaviour
         previousLevelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(previousLevelIndex + 1);
 
+        if ((previousLevelIndex + 1) > 0) {
+            int timesPlayed = PlayerPrefs.GetInt("Level" + (previousLevelIndex + 1 ) + "TimesPlayed");
+            PlayerPrefs.SetInt("Level" + (previousLevelIndex + 1 ) + "TimesPlayed", timesPlayed + 1);
+        }
+
         if (timeIsFrozen) {
             ResumeTime();
         }
@@ -90,6 +100,11 @@ public class LevelManagement : MonoBehaviour
     public void ResetScene() {
         previousLevelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(previousLevelIndex);
+
+        if (previousLevelIndex > 0) {
+            int timesPlayed = PlayerPrefs.GetInt("Level" + previousLevelIndex + "TimesPlayed");
+            PlayerPrefs.SetInt("Level" + previousLevelIndex + "TimesPlayed", timesPlayed + 1);
+        }
 
         if (timeIsFrozen) {
             ResumeTime();

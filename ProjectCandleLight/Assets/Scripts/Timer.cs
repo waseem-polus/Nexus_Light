@@ -38,9 +38,9 @@ public class Timer : MonoBehaviour
 
         if (bestTime > currentTime || bestTime <= 0) {
             PlayerPrefs.SetFloat("Level" + sceneIndex + "Time", currentTime);
-            bestTimerText.text = FloatTimeToString(currentTime) + " (New Best!)";
+            bestTimerText.text = "-" + FloatTimeToString(bestTime - currentTime) + " (New Best!)";
         } else {
-            bestTimerText.text = FloatTimeToString(bestTime);
+            bestTimerText.text = "+" + FloatTimeToString(currentTime - bestTime);
         }
     }
 
