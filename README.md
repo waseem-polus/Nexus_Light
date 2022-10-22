@@ -1,5 +1,5 @@
 # Nexus_Light
-[![itch page](https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white)](https://wassomi.itch.io/nexus-light)  
+[![itch page](https://img.shields.io/badge/-itch.io-%23FA5C5C?logo=Itch.io&logoColor=white)](https://wassomi.itch.io/nexus-light)  
 
 <br>  
 
@@ -26,10 +26,10 @@ I revisted some of the early animations I made a month later and this was the re
 		</td>
 	</thead>
 	<tr>
-		<td>
+		<td valign="bottom">
 			<img src="https://github.com/Waseem-Alkasbutrus/Nexus_Light/blob/master/GitHub%20Assets/Player_Old_Jump.gif?raw=true">
 		</td>
-		<td>
+		<td valign="bottom">
 			<img src="https://github.com/Waseem-Alkasbutrus/Nexus_Light/blob/master/GitHub%20Assets/Player_Jump.gif?raw=true">
 		</td>
 	</tr>
