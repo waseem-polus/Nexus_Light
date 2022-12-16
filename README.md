@@ -5,8 +5,7 @@
 
 ![](https://github.com/Waseem-Alkasbutrus/Nexus_Light/blob/master/GitHub%20Assets/Level%201%20Demo.gif?raw=true)  
 
-Maneuver the different levels as fast as possible to reach the nexus cube and move on to the next level all while avoiding the deadly lasers.  
-Made in Unity.
+In this game, players must navigate through various levels as quickly as possible, avoiding lasers and making their way to the nexus cube to progress to the next level. Test your speed and reflexes with this challenging and exciting game.
 
 <br>
 
